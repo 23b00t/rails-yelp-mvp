@@ -1,10 +1,12 @@
-<h1>Reviews</h1>
-<ul>
-  <% @reviews.each do |review| %>
-    <li><%= review.rating%></li>
-    <p><%= review.content %> </p>
-  <% end %>
-</ul>
+<div class="container">
+  <h1>Reviews</h1>
+  <ul>
+    <% @reviews.each do |review| %>
+      <li><%= review.rating%></li>
+      <p><%= review.content %> </p>
+    <% end %>
+  </ul>
 
-<%= link_to 'Go back to restaurant', restaurant_path(@restaurant) %>
-<%= link_to 'Create review', new_restaurant_review_path %>
+  <%= link_to 'Go back to restaurant', restaurant_path(@restaurant), class: 'btn btn-primary' %>
+  <%= link_to 'Create review', new_restaurant_review_path, class: 'btn btn-primary' %>
+</div>
