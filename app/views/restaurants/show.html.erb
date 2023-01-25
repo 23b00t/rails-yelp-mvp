@@ -1,7 +1,9 @@
-<div class="container">
-  <h1><%= @restaurant.name %></h1>
-  <h3><%= @restaurant.address %></h3>
-  <p><%= @restaurant.category %></p>
-  <p><%= @restaurant.phone_number %></p>
-  <%= link_to 'Reviews', restaurant_reviews_path(@restaurant), class: 'btn btn-primary' %>
+<div class="container d-flex justify-content-center">
+  <div>
+    <h1><%= @restaurant.name %></h1>
+    <h3><%= @restaurant.address %></h3>
+    <p><%= @restaurant.category %></p>
+    <p><%= @restaurant.phone_number %></p>
+    <%= link_to 'Reviews', restaurant_reviews_path(@restaurant), class: 'btn btn-secondary' %>
+  </div>
 </div>
