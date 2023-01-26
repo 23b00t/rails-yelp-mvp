@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   root 'restaurants#index'
 
   resources :restaurants, only: %i[index show new create] do
-    resources :reviews, only: %i[new create index]
+    resources :reviews, only: [:create]
   end
 end
